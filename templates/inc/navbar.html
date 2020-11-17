@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
     <div class="container-xl">
-        <a class="navbar-brand" href="/">Askme</a>
+        <a class="navbar-brand" href="{% url 'root' %}">Askme</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +15,7 @@
                     </form>
                 </li>
                 <li>
-                    <a href="/ask/" class="btn btn-outline-primary my-2 my-sm-0 active" role="button" aria-pressed="true">Спросить</a>
+                    <a href="{% url 'ask' %}" class="btn btn-outline-primary my-2 my-sm-0 active" role="button" aria-pressed="true">Спросить</a>
                 </li>
             </ul>
             <span>
@@ -23,8 +23,8 @@
             </span>
             <span>
                 <div class="m-2">Dr. Pepper</div>
-                <a class="m-2" href="/settings">Настройки</a>
-                <a href="/">Выйти</a>
+                <a class="m-2" href="{% url 'settings' %}">Настройки</a>
+                <a href="{% url 'root' %}">Выйти</a>
             </span>
         </div>
     </div>

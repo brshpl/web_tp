@@ -3,7 +3,7 @@
 
 {% block content %}
     <span class="h2 pr-2">Новые вопросы</span>
-    <a class="h3" href="/hot/">Главные обсуждения</a>
+    <a class="h3" href="{% url 'hot' %}">Главные обсуждения</a>
 
     {% for question in questions %}
         {% include 'inc/one_question.html' %}

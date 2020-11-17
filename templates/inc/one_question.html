@@ -11,16 +11,16 @@
         </div>
     </div>
     <div class="col-9 mt-3 mb-3">
-        <a class="h3 m-2" href="/question/{{ question.id }}/">{{ question.title }}</a>
+        <a class="h3 m-2" href="{% url 'question' question.id %}">{{ question.title }}</a>
         <div class="m-2">
             {{ question.text }}
         </div>
         <div class="row m-2 justify-content-between">
-            <a href="/question/{{ question.id }}/">Ответы ({{ question.answ_number }})</a>
+            <a href="{% url 'question' question.id %}">Ответы ({{ question.answ_number }})</a>
             <span>
                 Tags:
-                <a href="/tag/{{ question.tags.a }}/">{{ question.tags.a }}</a>
-                <a href="/tag/{{ question.tags.b }}/">{{ question.tags.b }}</a>
+                <a href="{% url 'tag' question.tags.a %}">{{ question.tags.a }}</a>
+                <a href="{% url 'tag' question.tags.b %}">{{ question.tags.b }}</a>
             </span>
         </div>
     </div>

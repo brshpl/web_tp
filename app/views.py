@@ -17,8 +17,8 @@ questions = [
         'text': 'text text',
         'answ_number': idx,
         'tags': {
-            'a': 'a' * idx,
-            'b': 'b' * idx,
+            'a': 'a' * (idx + 1),
+            'b': 'b' * (idx + 1),
         },
         'rating': idx,
     } for idx in range(45)
