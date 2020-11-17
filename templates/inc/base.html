@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Igor Barishpol">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Askme</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-static/">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <link href="{% static "css/question.css" %}" rel="stylesheet">
+</head>
+<body>
+
+{% include 'inc/navbar.html' %}
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-8 questions-list">
+
+            {% block content %}
+            {% endblock content %}
+
+        </div>
+        <div class="col-4">
+            {% block right %}
+                <div class="h3 pb-2">Популярные теги</div>
+                <div class="popular-tags">
+                    <a class="h4 pr-1 href-red" href="#">Наследование</a>
+                    <a class="h4 pr-1" href="#">Полиморфизм</a>
+                    <a class="h4 pr-1 href-green" href="#">Инкапсуляция</a>
+                    <a class="h4 pr-1" href="#">Абстракция</a>
+                    <a class="h4 pr-1" href="#">Животноводство</a>
+                </div>
+                <div class="h3 pt-5 pb-2">Популярные участники</div>
+                <div class="popular-tags">
+                    <a class="h4 pr-1 href-red" href="#">Рафаэль</a>
+                    <a class="h4 pr-1" href="#">Леонардо</a>
+                    <a class="h4 pr-1 href-green" href="#">Донателло</a>
+                    <a class="h4 pr-1" href="#">Микеланджело</a>
+                </div>
+            {%  endblock right %}
+        </div>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+</body>
+</html>

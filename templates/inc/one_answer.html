@@ -1,0 +1,22 @@
+{% load static %}
+<div class="question-box border mb-3 row">
+    <div class="col-3 mt-2 mb-2">
+        <div>
+            <img class="avatar-sm mx-auto d-block" src="{% static "img/avatar.jpg" %}" alt="avatar"/>
+        </div>
+        <div class="row justify-content-between m-2 vote">
+            <button class="dis-like-button like">+</button>
+            <span class="rating">{{ answer.rating }}</span>
+            <button class="dis-like-button dislike">-</button>
+        </div>
+    </div>
+    <div class="col-9 mt-3 mb-3">
+        <div class="m-2">
+            {{ answer.text }}
+        </div>
+        <div class="form-group form-check m-2">
+            <input type="checkbox" class="form-check-input" id="correctAnsw1">
+            <label class="form-check-label" for="correctAnsw1">Верно!</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{% load static %}
+<div class="question-box border mb-3 row">
+    <div class="col-3 mt-3 mb-3">
+        <div>
+            <img class="avatar" src="{% static "img/avatar.jpg" %}" alt="avatar"/>
+        </div>
+        <div class="row justify-content-between m-2 vote">
+            <button class="dis-like-button like">+</button>
+            <span class="rating">{{ question.rating }}</span>
+            <button class="dis-like-button dislike">-</button>
+        </div>
+    </div>
+    <div class="col-9 mt-3 mb-3">
+        <a class="h3 m-2" href="/question/{{ question.id }}/">{{ question.title }}</a>
+        <div class="m-2">
+            {{ question.text }}
+        </div>
+        <div class="row m-2 justify-content-between">
+            <a href="/question/{{ question.id }}/">Ответы ({{ question.answ_number }})</a>
+            <span>
+                Tags:
+                <a href="/tag/{{ question.tags.a }}/">{{ question.tags.a }}</a>
+                <a href="/tag/{{ question.tags.b }}/">{{ question.tags.b }}</a>
+            </span>
+        </div>
+    </div>
+</div>

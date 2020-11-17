@@ -1,0 +1,39 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="col-12 question-box">
+        <div class="h2 pt-2">Регистрация</div>
+        <div class="alert alert-danger" role="alert">
+            Эта эл.почта уже зарегистрирована
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="loginInput">Логин</label>
+                <input type="text" class="form-control" id="loginInput" required>
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Эл.Почта</label>
+                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">Мы никому не передадим ваш адрес электронной почты.</small>
+            </div>
+            <div class="form-group">
+                <label for="nickInput">Никнейм</label>
+                <input type="text" class="form-control" id="nickInput" required>
+            </div>
+            <div class="form-group">
+                <label for="passInput">Пароль</label>
+                <input type="password" class="form-control" id="passInput" required>
+            </div>
+            <div class="form-group">
+                <label for="pass2Input">Повторите пароль</label>
+                <input type="password" class="form-control" id="pass2Input" required>
+            </div>
+            <div class="form-group">
+                <label for="avatarInput">Загрузите аватар</label>
+                <input type="file" class="form-control-file" id="avatarInput" required>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Регистрироваться</button>
+        </form>
+    </div>
+{% endblock content %}

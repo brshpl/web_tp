@@ -1,0 +1,12 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+    <span class="h2 pr-2">Тег: {{ tag_name }}</span>
+
+    {% for question in questions %}
+        {% include 'inc/one_question.html' %}
+    {% endfor %}
+
+    {% include 'inc/paginator.html' %}
+{%  endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="col-12 question-box">
+        <div class="h2 pt-2">Настройки: Dr. Pepper</div>
+        <form>
+            <div class="form-group">
+                <label for="loginInput">Логин</label>
+                <input type="text" class="form-control" id="loginInput">
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Эл.Почта</label>
+                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Мы никому не передадим ваш адрес электронной почты.</small>
+            </div>
+            <div class="form-group">
+                <label for="nickInput">Никнейм</label>
+                <input type="text" class="form-control" id="nickInput">
+            </div>
+            <div class="form-group">
+                <div class="w-25">
+                    <img class="avatar" src="{% static "img/avatar.jpg" %}" alt="avatar"/>
+                </div>
+                <input type="file" class="form-control-file" id="avatarInput">
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Сохранить</button>
+        </form>
+    </div>
+{% endblock content %}

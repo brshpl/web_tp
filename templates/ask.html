@@ -1,0 +1,24 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="col-12 question-box">
+        <div class="h2 pt-2">Новый вопрос</div>
+        <form>
+            <div class="form-group">
+                <label for="titleInput">Заголовок</label>
+                <input type="text" class="form-control" id="titleInput">
+            </div>
+            <div class="form-group">
+                <label for="textInput">Текст</label>
+                <textarea class="form-control" id="textInput" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tagsInput">Теги</label>
+                <input type="text" class="form-control" id="tagsInput" aria-describedby="tagsHelp">
+                <small id="tagsHelp" class="form-text text-muted">Введите теги через запятую</small>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">Спросить!</button>
+        </form>
+    </div>
+{% endblock content %}

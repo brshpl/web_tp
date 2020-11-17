@@ -1,0 +1,13 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block content %}
+    <span class="h2 pr-2">Главные обсуждения</span>
+    <a class="h3" href="/">Новые вопросы</a>
+
+    {% for question in questions %}
+        {% include 'inc/one_question.html' %}
+    {% endfor %}
+
+    {% include 'inc/paginator.html' %}
+{% endblock content %}

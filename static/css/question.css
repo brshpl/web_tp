@@ -1,0 +1,38 @@
+.dis-like-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size:14px;
+    text-decoration:none;
+
+    color:#ffffff;
+    border-radius:50%;
+    border:2px solid #ffffff;
+}
+.like {
+    background: #42c66d;
+}
+.dislike {
+    background: #cb4560;
+}
+.dis-like-button:hover {
+    background:#354251;
+    color:#ffffff;
+    border:2px solid #354251;
+    transition: all 0.2s ease;
+}
+.rating {
+    display: inline-block;
+    padding-top: 15px;
+}
+.avatar {
+    width: 100%;
+    height: 100%;
+}
+.avatar-sm {
+    width: 75%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}

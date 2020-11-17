@@ -1,0 +1,31 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
+    <div class="container-xl">
+        <a class="navbar-brand" href="/">Askme</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <form class="form-inline mt-2 mt-md-0 mr-4">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+                    </form>
+                </li>
+                <li>
+                    <a href="/ask/" class="btn btn-outline-primary my-2 my-sm-0 active" role="button" aria-pressed="true">Спросить</a>
+                </li>
+            </ul>
+            <span>
+                <img class="avatar-nav m-2" src="{% static "img/avatar.jpg" %}" alt="avatar"/>
+            </span>
+            <span>
+                <div class="m-2">Dr. Pepper</div>
+                <a class="m-2" href="/settings">Настройки</a>
+                <a href="/">Выйти</a>
+            </span>
+        </div>
+    </div>
+</nav>
